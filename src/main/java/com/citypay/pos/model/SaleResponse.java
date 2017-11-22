@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * SaleResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-22T10:53:11.095Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-22T12:50:27.085Z")
 public class SaleResponse {
   @SerializedName("success")
   private Boolean success = null;
