@@ -13,7 +13,7 @@
 
 package com.citypay.pos;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-22T12:50:27.085Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-22T13:06:06.352Z")
 public class StringUtil {
   /**
    * Check if the given array contains the given value (with case-insensitive comparison).
