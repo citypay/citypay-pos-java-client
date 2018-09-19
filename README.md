@@ -1,4 +1,4 @@
-# swagger-java-client
+# citypay-pos-api-java
 
 ## Requirements
 
@@ -26,8 +26,8 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-    <groupId>io.swagger</groupId>
-    <artifactId>swagger-java-client</artifactId>
+    <groupId>com.citypay.pos</groupId>
+    <artifactId>citypay-pos-api-java</artifactId>
     <version>1.0.0</version>
     <scope>compile</scope>
 </dependency>
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "io.swagger:swagger-java-client:1.0.0"
+compile "com.citypay.pos:citypay-pos-api-java:1.0.0"
 ```
 
 ### Others
@@ -49,7 +49,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/swagger-java-client-1.0.0.jar
+* target/citypay-pos-api-java-1.0.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -58,10 +58,10 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import io.swagger.client.api.DeviceModuleApi;
+import com.citypay.invoker.*;
+import com.citypay.invoker.auth.*;
+import com.citypay.pos.model.*;
+import com.citypay.pos.api.remote.DeviceModuleApi;
 
 import java.io.File;
 import java.util.*;

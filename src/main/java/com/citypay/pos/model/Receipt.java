@@ -26,27 +26,27 @@ import java.io.IOException;
 /**
  * Receipt
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-22T13:39:47.412Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-09-19T12:47:08.486Z")
 public class Receipt {
-  @SerializedName("customer")
-  private String customer = null;
+  @SerializedName("receipt")
+  private String receipt = null;
 
-  public Receipt customer(String customer) {
-    this.customer = customer;
+  public Receipt receipt(String receipt) {
+    this.receipt = receipt;
     return this;
   }
 
    /**
-   * The customer receipt to be printed or stored
-   * @return customer
+   * The receipt to be printed or stored
+   * @return receipt
   **/
-  @ApiModelProperty(value = "The customer receipt to be printed or stored")
-  public String getCustomer() {
-    return customer;
+  @ApiModelProperty(value = "The receipt to be printed or stored")
+  public String getReceipt() {
+    return receipt;
   }
 
-  public void setCustomer(String customer) {
-    this.customer = customer;
+  public void setReceipt(String receipt) {
+    this.receipt = receipt;
   }
 
 
@@ -59,12 +59,12 @@ public class Receipt {
       return false;
     }
     Receipt receipt = (Receipt) o;
-    return Objects.equals(this.customer, receipt.customer);
+    return Objects.equals(this.receipt, receipt.receipt);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(customer);
+    return Objects.hash(receipt);
   }
 
 
@@ -73,7 +73,7 @@ public class Receipt {
     StringBuilder sb = new StringBuilder();
     sb.append("class Receipt {\n");
     
-    sb.append("    customer: ").append(toIndentedString(customer)).append("\n");
+    sb.append("    receipt: ").append(toIndentedString(receipt)).append("\n");
     sb.append("}");
     return sb.toString();
   }

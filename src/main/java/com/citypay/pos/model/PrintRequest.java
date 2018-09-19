@@ -26,13 +26,34 @@ import java.io.IOException;
 /**
  * PrintRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-22T13:39:47.412Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-09-19T12:47:08.486Z")
 public class PrintRequest {
+  @SerializedName("device")
+  private String device = null;
+
   @SerializedName("identifier")
   private String identifier = null;
 
   @SerializedName("type")
   private String type = null;
+
+  public PrintRequest device(String device) {
+    this.device = device;
+    return this;
+  }
+
+   /**
+   * The name of the target device used by the API. The device will be setup prior to the sale but allows targeting of multiple devices.
+   * @return device
+  **/
+  @ApiModelProperty(example = "TID001", required = true, value = "The name of the target device used by the API. The device will be setup prior to the sale but allows targeting of multiple devices.")
+  public String getDevice() {
+    return device;
+  }
+
+  public void setDevice(String device) {
+    this.device = device;
+  }
 
   public PrintRequest identifier(String identifier) {
     this.identifier = identifier;
@@ -80,13 +101,14 @@ public class PrintRequest {
       return false;
     }
     PrintRequest printRequest = (PrintRequest) o;
-    return Objects.equals(this.identifier, printRequest.identifier) &&
+    return Objects.equals(this.device, printRequest.device) &&
+        Objects.equals(this.identifier, printRequest.identifier) &&
         Objects.equals(this.type, printRequest.type);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(identifier, type);
+    return Objects.hash(device, identifier, type);
   }
 
 
@@ -95,6 +117,7 @@ public class PrintRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class PrintRequest {\n");
     
+    sb.append("    device: ").append(toIndentedString(device)).append("\n");
     sb.append("    identifier: ").append(toIndentedString(identifier)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");

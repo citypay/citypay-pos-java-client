@@ -26,7 +26,7 @@ import java.io.IOException;
 /**
  * DeviceInfo
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-22T13:39:47.412Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-09-19T12:47:08.486Z")
 public class DeviceInfo {
   @SerializedName("name")
   private String name = null;
@@ -48,6 +48,9 @@ public class DeviceInfo {
 
   @SerializedName("printer")
   private Boolean printer = null;
+
+  @SerializedName("connection_mode")
+  private String connectionMode = null;
 
   public DeviceInfo name(String name) {
     this.name = name;
@@ -175,6 +178,24 @@ public class DeviceInfo {
     this.printer = printer;
   }
 
+  public DeviceInfo connectionMode(String connectionMode) {
+    this.connectionMode = connectionMode;
+    return this;
+  }
+
+   /**
+   * The type of connection to the device such as wifi, bluetooth
+   * @return connectionMode
+  **/
+  @ApiModelProperty(value = "The type of connection to the device such as wifi, bluetooth")
+  public String getConnectionMode() {
+    return connectionMode;
+  }
+
+  public void setConnectionMode(String connectionMode) {
+    this.connectionMode = connectionMode;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -191,12 +212,13 @@ public class DeviceInfo {
         Objects.equals(this.busy, deviceInfo.busy) &&
         Objects.equals(this.batteryCharging, deviceInfo.batteryCharging) &&
         Objects.equals(this.batteryPercentage, deviceInfo.batteryPercentage) &&
-        Objects.equals(this.printer, deviceInfo.printer);
+        Objects.equals(this.printer, deviceInfo.printer) &&
+        Objects.equals(this.connectionMode, deviceInfo.connectionMode);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, serialno, portable, busy, batteryCharging, batteryPercentage, printer);
+    return Objects.hash(name, serialno, portable, busy, batteryCharging, batteryPercentage, printer, connectionMode);
   }
 
 
@@ -212,6 +234,7 @@ public class DeviceInfo {
     sb.append("    batteryCharging: ").append(toIndentedString(batteryCharging)).append("\n");
     sb.append("    batteryPercentage: ").append(toIndentedString(batteryPercentage)).append("\n");
     sb.append("    printer: ").append(toIndentedString(printer)).append("\n");
+    sb.append("    connectionMode: ").append(toIndentedString(connectionMode)).append("\n");
     sb.append("}");
     return sb.toString();
   }

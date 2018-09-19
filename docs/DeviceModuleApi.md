@@ -19,8 +19,8 @@ Obtains information regarding the device and to review the current status of a d
 ### Example
 ```java
 // Import classes:
-//import com.citypay.pos.ApiException;
-//import com.citypay.pos.api.DeviceModuleApi;
+//import com.citypay.invoker.ApiException;
+//import com.citypay.pos.api.remote.DeviceModuleApi;
 
 
 DeviceModuleApi apiInstance = new DeviceModuleApi();
@@ -64,8 +64,8 @@ To monitor or to check whether a device is available, the host can send a simple
 ### Example
 ```java
 // Import classes:
-//import com.citypay.pos.ApiException;
-//import com.citypay.pos.api.DeviceModuleApi;
+//import com.citypay.invoker.ApiException;
+//import com.citypay.pos.api.remote.DeviceModuleApi;
 
 
 DeviceModuleApi apiInstance = new DeviceModuleApi();

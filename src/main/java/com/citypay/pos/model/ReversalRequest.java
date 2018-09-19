@@ -26,10 +26,31 @@ import java.io.IOException;
 /**
  * ReversalRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-22T13:39:47.412Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-09-19T12:47:08.486Z")
 public class ReversalRequest {
+  @SerializedName("device")
+  private String device = null;
+
   @SerializedName("identifier")
   private String identifier = null;
+
+  public ReversalRequest device(String device) {
+    this.device = device;
+    return this;
+  }
+
+   /**
+   * The name of the target device used by the API. The device will be setup prior to the sale but allows targeting of multiple devices.
+   * @return device
+  **/
+  @ApiModelProperty(example = "TID001", required = true, value = "The name of the target device used by the API. The device will be setup prior to the sale but allows targeting of multiple devices.")
+  public String getDevice() {
+    return device;
+  }
+
+  public void setDevice(String device) {
+    this.device = device;
+  }
 
   public ReversalRequest identifier(String identifier) {
     this.identifier = identifier;
@@ -59,12 +80,13 @@ public class ReversalRequest {
       return false;
     }
     ReversalRequest reversalRequest = (ReversalRequest) o;
-    return Objects.equals(this.identifier, reversalRequest.identifier);
+    return Objects.equals(this.device, reversalRequest.device) &&
+        Objects.equals(this.identifier, reversalRequest.identifier);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(identifier);
+    return Objects.hash(device, identifier);
   }
 
 
@@ -73,6 +95,7 @@ public class ReversalRequest {
     StringBuilder sb = new StringBuilder();
     sb.append("class ReversalRequest {\n");
     
+    sb.append("    device: ").append(toIndentedString(device)).append("\n");
     sb.append("    identifier: ").append(toIndentedString(identifier)).append("\n");
     sb.append("}");
     return sb.toString();

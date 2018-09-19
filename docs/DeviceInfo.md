@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **batteryCharging** | **Boolean** | Whether the device is currently charging |  [optional]
 **batteryPercentage** | **Integer** | A percentage value of the battery |  [optional]
 **printer** | **Boolean** | Whether the device has a printer |  [optional]
+**connectionMode** | **String** | The type of connection to the device such as wifi, bluetooth |  [optional]
 
 
 

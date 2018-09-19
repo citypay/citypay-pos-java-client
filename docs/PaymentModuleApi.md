@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="receipt"></a>
 # **receipt**
-> TransactionResult receipt(body)
+> Receipt receipt(body)
 
 Receipt Print
 
@@ -22,14 +22,14 @@ Reprint a merchant or customer receipt for a transaction that exists on the devi
 ### Example
 ```java
 // Import classes:
-//import com.citypay.pos.ApiException;
-//import com.citypay.pos.api.PaymentModuleApi;
+//import com.citypay.invoker.ApiException;
+//import com.citypay.pos.api.remote.PaymentModuleApi;
 
 
 PaymentModuleApi apiInstance = new PaymentModuleApi();
-TransactionProgress body = new TransactionProgress(); // TransactionProgress | 
+PrintRequest body = new PrintRequest(); // PrintRequest | 
 try {
-    TransactionResult result = apiInstance.receipt(body);
+    Receipt result = apiInstance.receipt(body);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PaymentModuleApi#receipt");
@@ -41,11 +41,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**TransactionProgress**](TransactionProgress.md)|  | [optional]
+ **body** | [**PrintRequest**](PrintRequest.md)|  | [optional]
 
 ### Return type
 
-[**TransactionResult**](TransactionResult.md)
+[**Receipt**](Receipt.md)
 
 ### Authorization
 
@@ -67,8 +67,8 @@ Initiates a new refund to a device. The action will contact the device and reque
 ### Example
 ```java
 // Import classes:
-//import com.citypay.pos.ApiException;
-//import com.citypay.pos.api.PaymentModuleApi;
+//import com.citypay.invoker.ApiException;
+//import com.citypay.pos.api.remote.PaymentModuleApi;
 
 
 PaymentModuleApi apiInstance = new PaymentModuleApi();
@@ -112,8 +112,8 @@ Initiates a reversal to a device. No confirmation is made and the transaction re
 ### Example
 ```java
 // Import classes:
-//import com.citypay.pos.ApiException;
-//import com.citypay.pos.api.PaymentModuleApi;
+//import com.citypay.invoker.ApiException;
+//import com.citypay.pos.api.remote.PaymentModuleApi;
 
 
 PaymentModuleApi apiInstance = new PaymentModuleApi();
@@ -157,8 +157,8 @@ Initiates a new sale to a device. The action will contact the device and request
 ### Example
 ```java
 // Import classes:
-//import com.citypay.pos.ApiException;
-//import com.citypay.pos.api.PaymentModuleApi;
+//import com.citypay.invoker.ApiException;
+//import com.citypay.pos.api.remote.PaymentModuleApi;
 
 
 PaymentModuleApi apiInstance = new PaymentModuleApi();
@@ -202,8 +202,8 @@ Request the status of a transaction in progress or a complete transaction using 
 ### Example
 ```java
 // Import classes:
-//import com.citypay.pos.ApiException;
-//import com.citypay.pos.api.PaymentModuleApi;
+//import com.citypay.invoker.ApiException;
+//import com.citypay.pos.api.remote.PaymentModuleApi;
 
 
 PaymentModuleApi apiInstance = new PaymentModuleApi();

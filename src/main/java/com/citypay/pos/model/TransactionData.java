@@ -26,13 +26,19 @@ import java.io.IOException;
 /**
  * TransactionData
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-22T13:39:47.412Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-09-19T12:47:08.486Z")
 public class TransactionData {
   @SerializedName("additional_data")
   private String additionalData = null;
 
   @SerializedName("auxiliary_data")
   private String auxiliaryData = null;
+
+  @SerializedName("amount")
+  private Integer amount = null;
+
+  @SerializedName("card_presented")
+  private Boolean cardPresented = null;
 
   @SerializedName("card_type")
   private String cardType = null;
@@ -45,6 +51,15 @@ public class TransactionData {
 
   @SerializedName("currency_symbol")
   private String currencySymbol = null;
+
+  @SerializedName("customer_receipt")
+  private String customerReceipt = null;
+
+  @SerializedName("cvm_mode")
+  private String cvmMode = null;
+
+  @SerializedName("datasource")
+  private String datasource = null;
 
   @SerializedName("declined_by_card")
   private Boolean declinedByCard = null;
@@ -109,20 +124,29 @@ public class TransactionData {
   @SerializedName("emv_txn_unpredictable_number")
   private String emvTxnUnpredictableNumber = null;
 
+  @SerializedName("is_closed")
+  private Boolean isClosed = null;
+
   @SerializedName("is_commercial_card")
-  private String isCommercialCard = null;
+  private Boolean isCommercialCard = null;
+
+  @SerializedName("is_completed")
+  private Boolean isCompleted = null;
 
   @SerializedName("is_contactless")
-  private String isContactless = null;
+  private Boolean isContactless = null;
 
   @SerializedName("is_fallback")
-  private String isFallback = null;
+  private Boolean isFallback = null;
 
   @SerializedName("is_offline")
-  private String isOffline = null;
+  private Boolean isOffline = null;
 
   @SerializedName("is_voided")
-  private String isVoided = null;
+  private Boolean isVoided = null;
+
+  @SerializedName("merchant_receipt")
+  private String merchantReceipt = null;
 
   @SerializedName("response_code")
   private String responseCode = null;
@@ -137,7 +161,7 @@ public class TransactionData {
   private String scheme = null;
 
   @SerializedName("signature_required")
-  private String signatureRequired = null;
+  private Boolean signatureRequired = null;
 
   @SerializedName("terminal_id")
   private String terminalId = null;
@@ -150,6 +174,9 @@ public class TransactionData {
 
   @SerializedName("verified_by_pin")
   private Boolean verifiedByPin = null;
+
+  @SerializedName("identifier")
+  private String identifier = null;
 
   public TransactionData additionalData(String additionalData) {
     this.additionalData = additionalData;
@@ -185,6 +212,42 @@ public class TransactionData {
 
   public void setAuxiliaryData(String auxiliaryData) {
     this.auxiliaryData = auxiliaryData;
+  }
+
+  public TransactionData amount(Integer amount) {
+    this.amount = amount;
+    return this;
+  }
+
+   /**
+   * The base amount processed
+   * @return amount
+  **/
+  @ApiModelProperty(example = "1", value = "The base amount processed")
+  public Integer getAmount() {
+    return amount;
+  }
+
+  public void setAmount(Integer amount) {
+    this.amount = amount;
+  }
+
+  public TransactionData cardPresented(Boolean cardPresented) {
+    this.cardPresented = cardPresented;
+    return this;
+  }
+
+   /**
+   * Whether the card was presented to the device
+   * @return cardPresented
+  **/
+  @ApiModelProperty(example = "true", value = "Whether the card was presented to the device")
+  public Boolean isCardPresented() {
+    return cardPresented;
+  }
+
+  public void setCardPresented(Boolean cardPresented) {
+    this.cardPresented = cardPresented;
   }
 
   public TransactionData cardType(String cardType) {
@@ -257,6 +320,60 @@ public class TransactionData {
 
   public void setCurrencySymbol(String currencySymbol) {
     this.currencySymbol = currencySymbol;
+  }
+
+  public TransactionData customerReceipt(String customerReceipt) {
+    this.customerReceipt = customerReceipt;
+    return this;
+  }
+
+   /**
+   * The customer receipt to print
+   * @return customerReceipt
+  **/
+  @ApiModelProperty(value = "The customer receipt to print")
+  public String getCustomerReceipt() {
+    return customerReceipt;
+  }
+
+  public void setCustomerReceipt(String customerReceipt) {
+    this.customerReceipt = customerReceipt;
+  }
+
+  public TransactionData cvmMode(String cvmMode) {
+    this.cvmMode = cvmMode;
+    return this;
+  }
+
+   /**
+   * The card holder verification method used
+   * @return cvmMode
+  **/
+  @ApiModelProperty(value = "The card holder verification method used")
+  public String getCvmMode() {
+    return cvmMode;
+  }
+
+  public void setCvmMode(String cvmMode) {
+    this.cvmMode = cvmMode;
+  }
+
+  public TransactionData datasource(String datasource) {
+    this.datasource = datasource;
+    return this;
+  }
+
+   /**
+   * A string of the source of data
+   * @return datasource
+  **/
+  @ApiModelProperty(value = "A string of the source of data")
+  public String getDatasource() {
+    return datasource;
+  }
+
+  public void setDatasource(String datasource) {
+    this.datasource = datasource;
   }
 
   public TransactionData declinedByCard(Boolean declinedByCard) {
@@ -637,7 +754,25 @@ public class TransactionData {
     this.emvTxnUnpredictableNumber = emvTxnUnpredictableNumber;
   }
 
-  public TransactionData isCommercialCard(String isCommercialCard) {
+  public TransactionData isClosed(Boolean isClosed) {
+    this.isClosed = isClosed;
+    return this;
+  }
+
+   /**
+   * Determines if the transaction is closed
+   * @return isClosed
+  **/
+  @ApiModelProperty(example = "true", value = "Determines if the transaction is closed")
+  public Boolean isIsClosed() {
+    return isClosed;
+  }
+
+  public void setIsClosed(Boolean isClosed) {
+    this.isClosed = isClosed;
+  }
+
+  public TransactionData isCommercialCard(Boolean isCommercialCard) {
     this.isCommercialCard = isCommercialCard;
     return this;
   }
@@ -647,15 +782,33 @@ public class TransactionData {
    * @return isCommercialCard
   **/
   @ApiModelProperty(example = "false", value = "Determines if the card was a commercial card")
-  public String getIsCommercialCard() {
+  public Boolean isIsCommercialCard() {
     return isCommercialCard;
   }
 
-  public void setIsCommercialCard(String isCommercialCard) {
+  public void setIsCommercialCard(Boolean isCommercialCard) {
     this.isCommercialCard = isCommercialCard;
   }
 
-  public TransactionData isContactless(String isContactless) {
+  public TransactionData isCompleted(Boolean isCompleted) {
+    this.isCompleted = isCompleted;
+    return this;
+  }
+
+   /**
+   * Determines if the transaction was completed
+   * @return isCompleted
+  **/
+  @ApiModelProperty(example = "true", value = "Determines if the transaction was completed")
+  public Boolean isIsCompleted() {
+    return isCompleted;
+  }
+
+  public void setIsCompleted(Boolean isCompleted) {
+    this.isCompleted = isCompleted;
+  }
+
+  public TransactionData isContactless(Boolean isContactless) {
     this.isContactless = isContactless;
     return this;
   }
@@ -665,15 +818,15 @@ public class TransactionData {
    * @return isContactless
   **/
   @ApiModelProperty(example = "true", value = "Determines if the card was contactless")
-  public String getIsContactless() {
+  public Boolean isIsContactless() {
     return isContactless;
   }
 
-  public void setIsContactless(String isContactless) {
+  public void setIsContactless(Boolean isContactless) {
     this.isContactless = isContactless;
   }
 
-  public TransactionData isFallback(String isFallback) {
+  public TransactionData isFallback(Boolean isFallback) {
     this.isFallback = isFallback;
     return this;
   }
@@ -683,15 +836,15 @@ public class TransactionData {
    * @return isFallback
   **/
   @ApiModelProperty(example = "false", value = "Determines if fallback was used")
-  public String getIsFallback() {
+  public Boolean isIsFallback() {
     return isFallback;
   }
 
-  public void setIsFallback(String isFallback) {
+  public void setIsFallback(Boolean isFallback) {
     this.isFallback = isFallback;
   }
 
-  public TransactionData isOffline(String isOffline) {
+  public TransactionData isOffline(Boolean isOffline) {
     this.isOffline = isOffline;
     return this;
   }
@@ -701,15 +854,15 @@ public class TransactionData {
    * @return isOffline
   **/
   @ApiModelProperty(example = "false", value = "Determines if the transaction was authorised offline")
-  public String getIsOffline() {
+  public Boolean isIsOffline() {
     return isOffline;
   }
 
-  public void setIsOffline(String isOffline) {
+  public void setIsOffline(Boolean isOffline) {
     this.isOffline = isOffline;
   }
 
-  public TransactionData isVoided(String isVoided) {
+  public TransactionData isVoided(Boolean isVoided) {
     this.isVoided = isVoided;
     return this;
   }
@@ -719,12 +872,30 @@ public class TransactionData {
    * @return isVoided
   **/
   @ApiModelProperty(example = "false", value = "Determines if the transaction was voided")
-  public String getIsVoided() {
+  public Boolean isIsVoided() {
     return isVoided;
   }
 
-  public void setIsVoided(String isVoided) {
+  public void setIsVoided(Boolean isVoided) {
     this.isVoided = isVoided;
+  }
+
+  public TransactionData merchantReceipt(String merchantReceipt) {
+    this.merchantReceipt = merchantReceipt;
+    return this;
+  }
+
+   /**
+   * The merchant receipt
+   * @return merchantReceipt
+  **/
+  @ApiModelProperty(value = "The merchant receipt")
+  public String getMerchantReceipt() {
+    return merchantReceipt;
+  }
+
+  public void setMerchantReceipt(String merchantReceipt) {
+    this.merchantReceipt = merchantReceipt;
   }
 
   public TransactionData responseCode(String responseCode) {
@@ -799,7 +970,7 @@ public class TransactionData {
     this.scheme = scheme;
   }
 
-  public TransactionData signatureRequired(String signatureRequired) {
+  public TransactionData signatureRequired(Boolean signatureRequired) {
     this.signatureRequired = signatureRequired;
     return this;
   }
@@ -809,11 +980,11 @@ public class TransactionData {
    * @return signatureRequired
   **/
   @ApiModelProperty(example = "false", value = "Determines whether a signature was required for legacy systems")
-  public String getSignatureRequired() {
+  public Boolean isSignatureRequired() {
     return signatureRequired;
   }
 
-  public void setSignatureRequired(String signatureRequired) {
+  public void setSignatureRequired(Boolean signatureRequired) {
     this.signatureRequired = signatureRequired;
   }
 
@@ -889,6 +1060,24 @@ public class TransactionData {
     this.verifiedByPin = verifiedByPin;
   }
 
+  public TransactionData identifier(String identifier) {
+    this.identifier = identifier;
+    return this;
+  }
+
+   /**
+   * The identifier of the transaction
+   * @return identifier
+  **/
+  @ApiModelProperty(example = "pt-4", value = "The identifier of the transaction")
+  public String getIdentifier() {
+    return identifier;
+  }
+
+  public void setIdentifier(String identifier) {
+    this.identifier = identifier;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -901,10 +1090,15 @@ public class TransactionData {
     TransactionData transactionData = (TransactionData) o;
     return Objects.equals(this.additionalData, transactionData.additionalData) &&
         Objects.equals(this.auxiliaryData, transactionData.auxiliaryData) &&
+        Objects.equals(this.amount, transactionData.amount) &&
+        Objects.equals(this.cardPresented, transactionData.cardPresented) &&
         Objects.equals(this.cardType, transactionData.cardType) &&
         Objects.equals(this.completedAt, transactionData.completedAt) &&
         Objects.equals(this.createdAt, transactionData.createdAt) &&
         Objects.equals(this.currencySymbol, transactionData.currencySymbol) &&
+        Objects.equals(this.customerReceipt, transactionData.customerReceipt) &&
+        Objects.equals(this.cvmMode, transactionData.cvmMode) &&
+        Objects.equals(this.datasource, transactionData.datasource) &&
         Objects.equals(this.declinedByCard, transactionData.declinedByCard) &&
         Objects.equals(this.emvAppCryptogram, transactionData.emvAppCryptogram) &&
         Objects.equals(this.emvAppExpirationDate, transactionData.emvAppExpirationDate) &&
@@ -926,11 +1120,14 @@ public class TransactionData {
         Objects.equals(this.emvTxnStatusInfo, transactionData.emvTxnStatusInfo) &&
         Objects.equals(this.emvTxnType, transactionData.emvTxnType) &&
         Objects.equals(this.emvTxnUnpredictableNumber, transactionData.emvTxnUnpredictableNumber) &&
+        Objects.equals(this.isClosed, transactionData.isClosed) &&
         Objects.equals(this.isCommercialCard, transactionData.isCommercialCard) &&
+        Objects.equals(this.isCompleted, transactionData.isCompleted) &&
         Objects.equals(this.isContactless, transactionData.isContactless) &&
         Objects.equals(this.isFallback, transactionData.isFallback) &&
         Objects.equals(this.isOffline, transactionData.isOffline) &&
         Objects.equals(this.isVoided, transactionData.isVoided) &&
+        Objects.equals(this.merchantReceipt, transactionData.merchantReceipt) &&
         Objects.equals(this.responseCode, transactionData.responseCode) &&
         Objects.equals(this.responseText, transactionData.responseText) &&
         Objects.equals(this.result, transactionData.result) &&
@@ -939,12 +1136,13 @@ public class TransactionData {
         Objects.equals(this.terminalId, transactionData.terminalId) &&
         Objects.equals(this.totalAmount, transactionData.totalAmount) &&
         Objects.equals(this.transactionType, transactionData.transactionType) &&
-        Objects.equals(this.verifiedByPin, transactionData.verifiedByPin);
+        Objects.equals(this.verifiedByPin, transactionData.verifiedByPin) &&
+        Objects.equals(this.identifier, transactionData.identifier);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(additionalData, auxiliaryData, cardType, completedAt, createdAt, currencySymbol, declinedByCard, emvAppCryptogram, emvAppExpirationDate, emvAppTxnCounter, emvAuthorizedAmount, emvCardholderVerificationResults, emvCountryCode, emvCryptogramInfoData, emvIccAppid, emvInterchangeProfile, emvIssuerAppData, emvPanSeqNum, emvTerminalCapabilities, emvTerminalType, emvTerminalVerificationResults, emvTrack2Equivalent, emvTxnCurrencyCode, emvTxnDate, emvTxnStatusInfo, emvTxnType, emvTxnUnpredictableNumber, isCommercialCard, isContactless, isFallback, isOffline, isVoided, responseCode, responseText, result, scheme, signatureRequired, terminalId, totalAmount, transactionType, verifiedByPin);
+    return Objects.hash(additionalData, auxiliaryData, amount, cardPresented, cardType, completedAt, createdAt, currencySymbol, customerReceipt, cvmMode, datasource, declinedByCard, emvAppCryptogram, emvAppExpirationDate, emvAppTxnCounter, emvAuthorizedAmount, emvCardholderVerificationResults, emvCountryCode, emvCryptogramInfoData, emvIccAppid, emvInterchangeProfile, emvIssuerAppData, emvPanSeqNum, emvTerminalCapabilities, emvTerminalType, emvTerminalVerificationResults, emvTrack2Equivalent, emvTxnCurrencyCode, emvTxnDate, emvTxnStatusInfo, emvTxnType, emvTxnUnpredictableNumber, isClosed, isCommercialCard, isCompleted, isContactless, isFallback, isOffline, isVoided, merchantReceipt, responseCode, responseText, result, scheme, signatureRequired, terminalId, totalAmount, transactionType, verifiedByPin, identifier);
   }
 
 
@@ -955,10 +1153,15 @@ public class TransactionData {
     
     sb.append("    additionalData: ").append(toIndentedString(additionalData)).append("\n");
     sb.append("    auxiliaryData: ").append(toIndentedString(auxiliaryData)).append("\n");
+    sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
+    sb.append("    cardPresented: ").append(toIndentedString(cardPresented)).append("\n");
     sb.append("    cardType: ").append(toIndentedString(cardType)).append("\n");
     sb.append("    completedAt: ").append(toIndentedString(completedAt)).append("\n");
     sb.append("    createdAt: ").append(toIndentedString(createdAt)).append("\n");
     sb.append("    currencySymbol: ").append(toIndentedString(currencySymbol)).append("\n");
+    sb.append("    customerReceipt: ").append(toIndentedString(customerReceipt)).append("\n");
+    sb.append("    cvmMode: ").append(toIndentedString(cvmMode)).append("\n");
+    sb.append("    datasource: ").append(toIndentedString(datasource)).append("\n");
     sb.append("    declinedByCard: ").append(toIndentedString(declinedByCard)).append("\n");
     sb.append("    emvAppCryptogram: ").append(toIndentedString(emvAppCryptogram)).append("\n");
     sb.append("    emvAppExpirationDate: ").append(toIndentedString(emvAppExpirationDate)).append("\n");
@@ -980,11 +1183,14 @@ public class TransactionData {
     sb.append("    emvTxnStatusInfo: ").append(toIndentedString(emvTxnStatusInfo)).append("\n");
     sb.append("    emvTxnType: ").append(toIndentedString(emvTxnType)).append("\n");
     sb.append("    emvTxnUnpredictableNumber: ").append(toIndentedString(emvTxnUnpredictableNumber)).append("\n");
+    sb.append("    isClosed: ").append(toIndentedString(isClosed)).append("\n");
     sb.append("    isCommercialCard: ").append(toIndentedString(isCommercialCard)).append("\n");
+    sb.append("    isCompleted: ").append(toIndentedString(isCompleted)).append("\n");
     sb.append("    isContactless: ").append(toIndentedString(isContactless)).append("\n");
     sb.append("    isFallback: ").append(toIndentedString(isFallback)).append("\n");
     sb.append("    isOffline: ").append(toIndentedString(isOffline)).append("\n");
     sb.append("    isVoided: ").append(toIndentedString(isVoided)).append("\n");
+    sb.append("    merchantReceipt: ").append(toIndentedString(merchantReceipt)).append("\n");
     sb.append("    responseCode: ").append(toIndentedString(responseCode)).append("\n");
     sb.append("    responseText: ").append(toIndentedString(responseText)).append("\n");
     sb.append("    result: ").append(toIndentedString(result)).append("\n");
@@ -994,6 +1200,7 @@ public class TransactionData {
     sb.append("    totalAmount: ").append(toIndentedString(totalAmount)).append("\n");
     sb.append("    transactionType: ").append(toIndentedString(transactionType)).append("\n");
     sb.append("    verifiedByPin: ").append(toIndentedString(verifiedByPin)).append("\n");
+    sb.append("    identifier: ").append(toIndentedString(identifier)).append("\n");
     sb.append("}");
     return sb.toString();
   }

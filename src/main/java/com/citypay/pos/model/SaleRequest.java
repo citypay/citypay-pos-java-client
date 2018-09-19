@@ -27,7 +27,7 @@ import java.io.IOException;
  * A request for a sale
  */
 @ApiModel(description = "A request for a sale")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-22T13:39:47.412Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-09-19T12:47:08.486Z")
 public class SaleRequest {
   @SerializedName("device")
   private String device = null;

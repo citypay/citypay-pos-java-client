@@ -27,13 +27,16 @@ import java.io.IOException;
 /**
  * TransactionResult
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-22T13:39:47.412Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-09-19T12:47:08.486Z")
 public class TransactionResult {
   @SerializedName("status")
   private String status = null;
 
   @SerializedName("identifier")
   private String identifier = null;
+
+  @SerializedName("success")
+  private Boolean success = null;
 
   @SerializedName("is_complete")
   private Boolean isComplete = null;
@@ -75,6 +78,24 @@ public class TransactionResult {
 
   public void setIdentifier(String identifier) {
     this.identifier = identifier;
+  }
+
+  public TransactionResult success(Boolean success) {
+    this.success = success;
+    return this;
+  }
+
+   /**
+   * A boolean value stating whether the transaction is available to be returned for inspection
+   * @return success
+  **/
+  @ApiModelProperty(value = "A boolean value stating whether the transaction is available to be returned for inspection")
+  public Boolean isSuccess() {
+    return success;
+  }
+
+  public void setSuccess(Boolean success) {
+    this.success = success;
   }
 
   public TransactionResult isComplete(Boolean isComplete) {
@@ -125,13 +146,14 @@ public class TransactionResult {
     TransactionResult transactionResult = (TransactionResult) o;
     return Objects.equals(this.status, transactionResult.status) &&
         Objects.equals(this.identifier, transactionResult.identifier) &&
+        Objects.equals(this.success, transactionResult.success) &&
         Objects.equals(this.isComplete, transactionResult.isComplete) &&
         Objects.equals(this.data, transactionResult.data);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(status, identifier, isComplete, data);
+    return Objects.hash(status, identifier, success, isComplete, data);
   }
 
 
@@ -142,6 +164,7 @@ public class TransactionResult {
     
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
     sb.append("    identifier: ").append(toIndentedString(identifier)).append("\n");
+    sb.append("    success: ").append(toIndentedString(success)).append("\n");
     sb.append("    isComplete: ").append(toIndentedString(isComplete)).append("\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("}");
