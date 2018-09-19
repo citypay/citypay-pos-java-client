@@ -115,10 +115,10 @@ public class KineticDeviceDriver extends BaseDeviceDriver {
             data.setCardPresented(src.isCardPresented());
             data.setCardType(src.getCardType());
             if (src.getCompletedAt() != null) {
-                data.setCompletedAt(new SimpleDateFormat("yyyy--MM-dd'T'HH::mm:ssZ").format(new Date(src.getCompletedAt() * 1000)));
+                data.setCompletedAt(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ").format(new Date(src.getCompletedAt() * 1000L)));
             }
             if (src.getCreatedAt() != null) {
-                data.setCreatedAt(new SimpleDateFormat("yyyy--MM-dd'T'HH::mm:ssZ").format(new Date(src.getCreatedAt() * 1000)));
+                data.setCreatedAt(new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZ").format(new Date(src.getCreatedAt() * 1000L)));
             }
             data.setCurrencySymbol(src.getCurrencySymbol());
             data.setCustomerReceipt(src.getCustomerReceipt());
